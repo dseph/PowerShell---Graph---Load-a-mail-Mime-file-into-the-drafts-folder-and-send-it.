@@ -1,0 +1,54 @@
+From: "Sender One" <user@contoso.com>
+To: "Recipient One" <anotheruser@contoso.com>
+Subject: Multipart MIME test (text+html+attachment)
+Date: Thu, 05 Mar 2026 13:27:00 -0500
+Message-ID: <multipartmime.20260305.132700.2@contoso.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="mix-boundary-7f3a3b8b9c0d4f3ea1c2d3e4f5a6b7c8"
+
+--mix-boundary-7f3a3b8b9c0d4f3ea1c2d3e4f5a6b7c8
+Content-Type: multipart/alternative; boundary="alt-boundary-0a1b2c3d4e5f6789"
+
+--alt-boundary-0a1b2c3d4e5f6789
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+This is the plain-text version of the message.
+
+- Item 1
+- Item 2
+- Item 3
+
+Thanks,
+Sender
+
+--alt-boundary-0a1b2c3d4e5f6789
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html>
+<html>
+  <body style="font-family: Segoe UI, Arial, sans-serif;">
+    <p>Hello,</p>
+    <p>This is the <b>HTML</b> version of the message.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <p>Thanks,<br/>Sender</p>
+  </body>
+</html>
+
+--alt-boundary-0a1b2c3d4e5f6789--
+
+--mix-boundary-7f3a3b8b9c0d4f3ea1c2d3e4f5a6b7c8
+Content-Type: text/plain; name="hello.txt"
+Content-Disposition: attachment; filename="hello.txt"
+Content-Transfer-Encoding: base64
+
+SGVsbG8gZnJvbSB0aGUgYXR0YWNobWVudCEKVGhpcyBpcyBhIHRlc3QgZmlsZS4K
+
+--mix-boundary-7f3a3b8b9c0d4f3ea1c2d3e4f5a6b7c8--
